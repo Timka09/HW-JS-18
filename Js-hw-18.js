@@ -54,3 +54,16 @@ const galaryList = document.querySelector("#gallery");
 
 galaryList.insertAdjacentHTML("beforeend", imagesElem);
 // Task 4
+const button1 = document.querySelector("[data-action=decrement]");
+const span = document.querySelector("#value");
+const button2 = document.querySelector("[data-action=increment]");
+
+let result = 0;
+
+button2.addEventListener("click", (event) => {
+  return (span.textContent = result += 1);
+});
+
+button1.addEventListener("click", (event) => {
+  return (span.textContent = result -= 1);
+});
